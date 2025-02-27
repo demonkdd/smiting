@@ -75,7 +75,11 @@ struct ViewSIms: View {
                                     {showCharacterSheet.toggle()}
                                 }
                             }
-                            //look at optionals for character button
+
+                            
+
+                            //look at optionals for character button still in progress
+
                             if let selectedCharacter {
                                 VStack {
                                     Character(Character: selectedCharacter)

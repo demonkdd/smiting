@@ -71,3 +71,6 @@ struct VIewFamily: View {
 #Preview {
     VIewFamily()
 }
+
+//page for viewing the family
+

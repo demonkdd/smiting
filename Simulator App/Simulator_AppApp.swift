@@ -18,3 +18,6 @@ struct Simulator_AppApp: App {
         .modelContainer(for: Character.self)
     }
 }
+
+//main page
+

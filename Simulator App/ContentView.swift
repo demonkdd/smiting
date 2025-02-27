@@ -14,6 +14,7 @@ import SwiftData
 
 
 
+//yo
 struct ContentView: View {
     @Query var Character: [Character]
     

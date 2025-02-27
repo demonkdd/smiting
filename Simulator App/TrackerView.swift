@@ -54,3 +54,6 @@ struct TrackerView: View {
 #Preview {
     TrackerView()
 }
+
+//page for the tracker
+
