@@ -78,7 +78,7 @@ struct ViewSIms: View {
 
                             
 
-                            //look at optionals for character button still in progress
+                            //look at optionals for character button still in progress.
 
                             if let selectedCharacter {
                                 VStack {
