@@ -1,7 +1,7 @@
 # The Simulator
 
 A character management application designed specifically for dedicated Sims players to organize their virtual families and neighborhoods.
-
+![Image](https://github.com/user-attachments/assets/bcdb0151-a4c3-4964-8618-87a19034909e)
 ## How to Use The Simulator
 The Simulator is a specialized character management application designed for avid Sims players who need to organize their extensive collections. Developed through user-centered design, this tool enables players to track family relationships, character traits, and neighborhood connections—transforming what was previously a cumbersome spreadsheet task into an engaging digital experience. Users can easily create character profiles, visualize family trees, and organize neighborhoods through an intuitive interface that maintains the authentic Sims aesthetic. By providing an organizational system that feels like a natural extension of the game, The Simulator enhances the gameplay experience while solving a genuine pain point for dedicated players.
 
