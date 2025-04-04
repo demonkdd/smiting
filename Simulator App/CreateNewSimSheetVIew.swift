@@ -158,5 +158,5 @@ struct CreateNewSimSheetVIew: View {
 
 #Preview {
     CreateNewSimSheetVIew()
-        .modelContainer(for: Character.self, inMemory: true)
+        .modelContainer(for: CharacterDetails.self, inMemory: true)
 }

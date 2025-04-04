@@ -11,9 +11,9 @@ import PhotosUI
 
 struct ViewSIms: View {
     @Environment(\.modelContext) private var modelContext
-    @Query var Character: [Character]
+    @Query var CharacterDetails: [CharacterDetails]
     @Environment(\.openWindow) private var openWindow
-    @State private var showCharacterSheet: Bool = false
+    @State private var showCharacterDetailsSheet: Bool = false
     
     enum Neighborhood: String {
         case RIVERBLOSSOM, OLD_TOWN, DOWNTOWN,VACATION_ISLAND, STUDIO_TOWN, MAGIC_TOWN, VERONAVILLE, STRANGE_TOWN
@@ -23,7 +23,7 @@ struct ViewSIms: View {
     @State private var selectedNeighborhood: Neighborhood = .RIVERBLOSSOM
     
     @State private var showCreateNewSimSheet: Bool = false
-    @State private var selectedCharacter: Character? = nil
+    @State private var selectedCharacterDetails: CharacterDetails? = nil
     
         var body: some View {
         NavigationStack {
@@ -66,23 +66,23 @@ struct ViewSIms: View {
                     Spacer()
                     Spacer()
                     List {
-                        ForEach(Character) { Character in
+                        ForEach(CharacterSheet) { CharacterDetails in
                             HStack{
-                                Text(self.Character(from: Character))
+                                Text(self.showCharacterSheet)
                                 
-                                Text(Character.firstName)
-                                Button(Character.firstName) {
-                                    {showCharacterSheet.toggle()}
+                                Text(CharacterDetails.firstName)
+                                Button(CharacterDetails.firstName) {
+                                    {showCharacterDetailsSheet.toggle()}
                                 }
                             }
 
                             
 
-                            //look at optionals for character button still in progress.
+                            //look at optionals for CharacterDetails button still in progress.
 
-                            if let selectedCharacter {
+                            if let selectedCharacterDetails {
                                 VStack {
-                                    Character(Character: selectedCharacter)
+                                    CharacterDetails(CharacterDetails: selectedCharacterDetails)
                                     Button("Close") {
                                         self.selectedSim = nil
                                     }
@@ -117,6 +117,6 @@ struct ViewSIms: View {
 
     #Preview {
         ViewSIms()
-        .modelContainer(for: Character.self, inMemory: true)
+        .modelContainer(for: CharacterDetails.self, inMemory: true)
     }
 

@@ -15,7 +15,7 @@ struct Simulator_AppApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Character.self)
+        .modelContainer(for: CharacterDetails.self)
     }
 }
 

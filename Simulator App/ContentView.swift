@@ -16,7 +16,7 @@ import SwiftData
 
 //yo
 struct ContentView: View {
-    @Query var Character: [Character]
+    @Query var CharacterDetails: [CharacterDetails]
     
     enum Neighborhood: String {
         case RIVERBLOSSOM, OLD_TOWN, DOWNTOWN,VACATION_ISLAND, STUDIO_TOWN, MAGIC_TOWN, VERONAVILLE, STRANGE_TOWN

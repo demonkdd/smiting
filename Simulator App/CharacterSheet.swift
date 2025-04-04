@@ -12,25 +12,28 @@ import PhotosUI
 //fetchdescriptor hacking with swift
 
 
-func `let`() -> FetchDescriptor; = FetchDescriptor<Character>()
 
-do {
-  let Character = try modelContext.fetch(FetchDescriptor)
-  
-  for Character in Character {
-      
-  }
-}
 
 
 
 struct CharacterSheet: View {
     @Environment(\.modelContext) private var context
-    @Query var Character: [Character]
+    @Query var CharacterDetails: [CharacterDetails]
+    
 var body: some View {
         ZStack {
-         
             
+            let characterDetails = CharacterSheet.CharacterDetails() { CharacterDetails.self; in
+                VStack {
+                    Text("\(CharacterDetails.firstName)")
+                    Text("\(CharacterDetails.lastName)")
+                    Text("\(CharacterDetails.age)")
+                    Text("\(CharacterDetails.gender)")
+                    Text("\(CharacterDetails.role)")
+                    Text("\(CharacterDetails.career)")
+                    Text("\(CharacterDetails.bio)")
+                }
+            }
            
         }
         
@@ -42,7 +45,7 @@ var body: some View {
 
 #Preview {
     CharacterSheet()
-        .modelContainer(for: Character.self, inMemory: true)
+        .modelContainer(for: CharacterDetails.self, inMemory: true)
 }
 
 
