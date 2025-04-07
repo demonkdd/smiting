@@ -14,13 +14,17 @@ import PhotosUI
 // so i changed Character -> CharacterDetails to try and make the button call the character sheet which would then call the CharacterDetails which should let us bring up the info the user inputed with out all the conflicts that were happening
 //need [Character] -> [CharacterDetails] to make it easier to call for them
 @Model
-
-
-
 class CharacterDetails: Identifiable {
     
     
-    func Character()
+    var Character: [CharacterDetails] = [
+        
+//        CharacterDetails(firstName: "Nick", lastName: "G", age: "30", gender: "man", role: "god", career: "empire", bio: "giw"),
+//        CharacterDetails(firstName: "Nick", lastName: "G", age: "30", gender: "man", role: "god", career: "empire", bio: "giw"),
+//        CharacterDetails(firstName: "Nick", lastName: "G", age: "30", gender: "man", role: "god", career: "empire", bio: "giw"),
+//        CharacterDetails(firstName: "Nick", lastName: "G", age: "30", gender: "man", role: "god", career: "empire", bio: "giw")
+        
+    ]
         
         var id: UUID = UUID()
         var firstName: String = ""

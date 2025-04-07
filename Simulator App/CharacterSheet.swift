@@ -18,12 +18,13 @@ import PhotosUI
 
 struct CharacterSheet: View {
     @Environment(\.modelContext) private var context
-    @Query var CharacterDetails: [CharacterDetails]
+    //query was here
+    var CharacterDetails: CharacterDetails
     
 var body: some View {
         ZStack {
             
-            let characterDetails = CharacterSheet.CharacterDetails() { CharacterDetails.self; in
+//            let characterDetails = CharacterSheet.CharacterDetails() { CharacterDetails.self; in
                 VStack {
                     Text("\(CharacterDetails.firstName)")
                     Text("\(CharacterDetails.lastName)")
@@ -39,13 +40,13 @@ var body: some View {
         
         
     }
-}
+
 
 
 
 #Preview {
-    CharacterSheet()
-        .modelContainer(for: CharacterDetails.self, inMemory: true)
+    CharacterSheet(CharacterDetails: CharacterDetails(firstName: "test", lastName: "test", age: "1", gender: "test", role: "test", career: "test", bio: "test"))
+       // .modelContainer(for: CharacterDetails.self, inMemory: true)
 }
 
 

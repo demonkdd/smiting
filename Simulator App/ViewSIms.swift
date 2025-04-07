@@ -65,32 +65,41 @@ struct ViewSIms: View {
                     }.frame(width: 395, height: 90)
                     Spacer()
                     Spacer()
-                    List {
-                        ForEach(CharacterSheet) { CharacterDetails in
-                            HStack{
-                                Text(self.showCharacterSheet)
-                                
-                                Text(CharacterDetails.firstName)
-                                Button(CharacterDetails.firstName) {
-                                    {showCharacterDetailsSheet.toggle()}
+                    
+                 
+                    
+                    List(CharacterDetails) { character in
+                        
+                        
+                       // Text(character.firstName)
+//                        ForEach(CharacterDetails) { character in
+//                            HStack{
+//                              
+//                                
+//                                Text(character.firstName)
+                        Button(character.firstName) {
+                                    showCharacterDetailsSheet.toggle()
                                 }
-                            }
-
+                        .sheet(isPresented: $showCharacterDetailsSheet, content: {
+                            CharacterSheet(CharacterDetails: character)
+                        })
                             
-
-                            //look at optionals for CharacterDetails button still in progress.
-
-                            if let selectedCharacterDetails {
-                                VStack {
-                                    CharacterDetails(CharacterDetails: selectedCharacterDetails)
-                                    Button("Close") {
-                                        self.selectedSim = nil
-                                    }
-                                }
-                            }
-                            
-                            
-                        }
+//
+//                            
+//
+//                            //look at optionals for CharacterDetails button still in progress.
+//
+//                            if let selectedCharacterDetails {
+//                                VStack {
+//                                    CharacterDetails(CharacterDetails: selectedCharacterDetails)
+//                                    Button("Close") {
+//                                        self.selectedSim = nil
+//                                    }
+//                                }
+//                            }
+//                            
+//                            
+//                        }
                         Button("CREATE NEW SIM")
                         {showCreateNewSimSheet.toggle()}
                             .foregroundStyle(Color.white)

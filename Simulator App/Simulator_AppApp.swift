@@ -14,8 +14,9 @@ struct Simulator_AppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .modelContainer(for: CharacterDetails.self)
         }
-        .modelContainer(for: CharacterDetails.self)
+        
     }
 }
 
