@@ -25,7 +25,7 @@ struct ViewSIms: View {
     @State private var showCreateNewSimSheet: Bool = false
     @State private var selectedCharacterDetails: CharacterDetails? = nil
     
-        var body: some View {
+    var body: some View {
         NavigationStack {
             
             
@@ -66,63 +66,48 @@ struct ViewSIms: View {
                     Spacer()
                     Spacer()
                     
-                 
+                    
                     
                     List(CharacterDetails) { character in
                         
                         
-                       // Text(character.firstName)
-//                        ForEach(CharacterDetails) { character in
-//                            HStack{
-//                              
-//                                
-//                                Text(character.firstName)
+                        Text(character.firstName)
                         Button(character.firstName) {
-                                    showCharacterDetailsSheet.toggle()
-                                }
+                            showCharacterDetailsSheet.toggle()
+                        }
                         .sheet(isPresented: $showCharacterDetailsSheet, content: {
                             CharacterSheet(CharacterDetails: character)
                         })
-                            
-//
-//                            
-//
-//                            //look at optionals for CharacterDetails button still in progress.
-//
-//                            if let selectedCharacterDetails {
-//                                VStack {
-//                                    CharacterDetails(CharacterDetails: selectedCharacterDetails)
-//                                    Button("Close") {
-//                                        self.selectedSim = nil
-//                                    }
-//                                }
-//                            }
-//                            
-//                            
-//                        }
-                        Button("CREATE NEW SIM")
-                        {showCreateNewSimSheet.toggle()}
-                            .foregroundStyle(Color.white)
-                            .font(.system(size: 16).bold())
-                            .sheet(isPresented: $showCreateNewSimSheet, content: {
-                                CreateNewSimSheetVIew()
-                                
-                            })
-                            .controlSize(.large)
-                            .padding()
-                            .background(Color("ButtonColor").opacity(0.5))
-                            .clipShape(RoundedRectangle(cornerRadius: 50))
-                            .shadow(radius:10)
+                        .padding()
+                        
+                        
+                        
+                        //look at optionals for CharacterDetails button still in progress.
+                        
+                        VStack {
+                            Button("CREATE NEW SIM")
+                            {showCreateNewSimSheet.toggle()}
+                                .foregroundStyle(Color.white)
+                                .font(.system(size: 16).bold())
+                                .sheet(isPresented: $showCreateNewSimSheet, content: {
+                                    CreateNewSimSheetVIew()
+                                    
+                                })
+                                .controlSize(.large)
+                                .padding()
+                                .background(Color("ButtonColor").opacity(0.5))
+                                .clipShape(RoundedRectangle(cornerRadius: 50))
+                                .shadow(radius:10)
+                        }
+                        
                     }
                     
                 }
                 
             }
-            
         }
     }
 }
-    
 
     #Preview {
         ViewSIms()

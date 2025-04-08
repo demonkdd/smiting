@@ -17,14 +17,8 @@ import PhotosUI
 class CharacterDetails: Identifiable {
     
     
-    var Character: [CharacterDetails] = [
-        
-//        CharacterDetails(firstName: "Nick", lastName: "G", age: "30", gender: "man", role: "god", career: "empire", bio: "giw"),
-//        CharacterDetails(firstName: "Nick", lastName: "G", age: "30", gender: "man", role: "god", career: "empire", bio: "giw"),
-//        CharacterDetails(firstName: "Nick", lastName: "G", age: "30", gender: "man", role: "god", career: "empire", bio: "giw"),
-//        CharacterDetails(firstName: "Nick", lastName: "G", age: "30", gender: "man", role: "god", career: "empire", bio: "giw")
-        
-    ]
+    /// <#Description#> This is where the character details are saved the a unique invidual character
+    var Character: [CharacterDetails] = []
         
         var id: UUID = UUID()
         var firstName: String = ""

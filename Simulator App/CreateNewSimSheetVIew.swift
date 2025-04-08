@@ -17,6 +17,9 @@ let gradientColors: [Color] = [
 
 
 struct VibrantCardModifier: ViewModifier {
+    /// this is a modifier for formatting the text fields
+    /// - Parameter content: You can modify the settings here and it will affect all current text boxes
+    /// - Returns: nothing lol its just for matting
     func body(content: Content) -> some View {
         content
             .frame(width: 350)
@@ -29,6 +32,8 @@ struct VibrantCardModifier: ViewModifier {
 }
 
 extension View {
+    /// This is the vibrant card modifier you can change the name but meh
+    /// - Returns: nothing its just a formating function
     func vibrantCard() -> some View {
         self.modifier(VibrantCardModifier())
     }
