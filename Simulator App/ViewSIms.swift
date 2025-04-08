@@ -79,7 +79,7 @@ struct ViewSIms: View {
                             CharacterSheet(CharacterDetails: character)
                         })
                         .padding()
-                        
+                    }
                         
                         
                         //look at optionals for CharacterDetails button still in progress.
@@ -100,7 +100,7 @@ struct ViewSIms: View {
                                 .shadow(radius:10)
                         }
                         
-                    }
+                    
                     
                 }
                 
